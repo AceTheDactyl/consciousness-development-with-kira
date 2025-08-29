@@ -39,7 +39,7 @@ export default function InsightsScreen() {
       value: "+23%",
       description: "Community participation increased this week",
       color: "#10B981",
-      gradient: ["#10B981", "#059669"],
+      gradient: ["#10B981", "#059669"] as const,
     },
     {
       icon: Brain,
@@ -47,7 +47,7 @@ export default function InsightsScreen() {
       value: "87%",
       description: "Contradictions resolved through ACMM",
       color: "#6366F1",
-      gradient: ["#6366F1", "#4F46E5"],
+      gradient: ["#6366F1", "#4F46E5"] as const,
     },
     {
       icon: Users,
@@ -55,7 +55,7 @@ export default function InsightsScreen() {
       value: "142",
       description: "Community intelligence index",
       color: "#8B5CF6",
-      gradient: ["#8B5CF6", "#7C3AED"],
+      gradient: ["#8B5CF6", "#7C3AED"] as const,
     },
     {
       icon: Sparkles,
@@ -63,7 +63,7 @@ export default function InsightsScreen() {
       value: "4.2x",
       description: "Ideas generated vs baseline",
       color: "#F59E0B",
-      gradient: ["#F59E0B", "#D97706"],
+      gradient: ["#F59E0B", "#D97706"] as const,
     },
   ];
 
@@ -95,7 +95,7 @@ export default function InsightsScreen() {
             return (
               <View key={index} style={styles.insightCard}>
                 <LinearGradient
-                  colors={insight.gradient as [string, string]}
+                  colors={insight.gradient}
                   style={styles.insightGradient}
                   start={{ x: 0, y: 0 }}
                   end={{ x: 1, y: 1 }}

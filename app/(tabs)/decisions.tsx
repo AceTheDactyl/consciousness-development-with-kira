@@ -52,11 +52,11 @@ export default function DecisionsScreen() {
   }, []);
 
   const handleSynthesisPress = useCallback(() => {
-    router.push("/synthesis");
+    router.push("/synthesis" as any);
   }, []);
 
   const handleDecisionPress = useCallback((id: string) => {
-    router.push(`/decision/${id}`);
+    router.push(`/decision/${id}` as any);
   }, []);
 
   return (
